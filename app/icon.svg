@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title"><title id="title">JV monogram</title><rect width="64" height="64" rx="13" fill="#fff"/><text x="8" y="45" font-family="Geist, Arial, Helvetica, sans-serif" font-size="45" font-weight="850" letter-spacing="-0.09em" fill="#142d52">JV</text><rect x="53" y="39" width="7" height="7" fill="#f29b53"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 64" role="img" aria-labelledby="title" width="70" height="56">
+  <title id="title">JV monogram</title>
+  <rect width="70" height="70" fill="#ffffff"/>
+  <text x="4" y="46" font-family="Geist, Arial, Helvetica, sans-serif" font-size="43" font-weight="850" letter-spacing="-0.09em" fill="#142d52">JV</text>
+  <rect x="57" y="40" width="6" height="6" fill="#f29b53"/>
+</svg>
