@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Po pořízení fotografie ji vlož do public/portrait.jpg a změň na true.
-const hasPortrait = false;
+const hasPortrait = true;
 
 const sections = [
   { number: "01", title: "O mně", slug: "o-mne", description: "Kdo jsem a co mě zajímá", arrow: "↗" },
@@ -20,7 +20,7 @@ function Portrait() {
   return (
     <div className="portrait-frame">
       {hasPortrait ? (
-        <Image src="/portrait.jpg" alt="Portrét Jakuba Vávry v podzimní přírodě" fill priority sizes="(max-width: 780px) 90vw, 40vw" className="portrait-image" />
+        <Image src="/portrait.png" alt="Portrét Jakuba Vávry v podzimní přírodě" fill priority sizes="(max-width: 780px) 90vw, 40vw" className="portrait-image" />
       ) : (
         <div className="portrait-placeholder" aria-label="Zatím zástupná ilustrace podzimní krajiny" role="img">
           <div className="sun" />
@@ -32,7 +32,7 @@ function Portrait() {
           <p className="photo-note"><span className="note-spark">✳</span> Místo pro podzimní fotografii</p>
         </div>
       )}
-      <span className="portrait-corner" aria-hidden="true">JV<span>®</span></span>
+      <span className="portrait-corner" aria-hidden="true">JV<span></span></span>
     </div>
   );
 }
@@ -54,8 +54,8 @@ export default function Home() {
           <p className="eyebrow"><span className="eyebrow-line" /> STUDIJNÍ & PROFESNÍ PORTFOLIO</p>
           <h1 id="main-heading">Jakub<br /><span>Vávra</span><span className="period">.</span></h1>
           <div className="hero-description">
-            <p>Studuji <strong>podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data a ekonomie.</p>
-            <p>Na tomto webu sdílím své projekty, studijní výstupy a zkušenosti.</p>
+            <p>Studuji <strong>Podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data a&nbsp;ekonomie.</p>
+            <p>Na tomto webu sdílím své projekty, studijní výstupy a&nbsp;zkušenosti.</p>
           </div>
           <div className="hero-actions">
             <Link className="button-primary" href="/projekty">Prohlédnout projekty <ArrowIcon /></Link>
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer wrap"><span>© 2026 Jakub Vávra</span><span>Vytvořeno s důrazem na jednoduchost a detail.</span><a href="mailto:kontakt@jakubvavra.eu">Napište mi ↗</a></footer>
+      <footer className="site-footer wrap"><span>© 2026 Jakub Vávra</span><span></span><a href="mailto:jakub07vavra@email.cz">Napište mi ↗</a></footer>
     </main>
   );
 }
