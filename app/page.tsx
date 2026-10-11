@@ -45,7 +45,7 @@ export default function Home() {
         <nav className="top-nav" aria-label="Hlavní navigace">
           <Link href="/projekty">Projekty</Link>
           <Link href="/o-mne">O mně</Link>
-          <a className="nav-contact" href="mailto:kontakt@jakubvavra.eu">Kontakt <ArrowIcon /></a>
+          <a className="nav-contact" href="mailto:jakub07vavra@email.cz">Kontakt <ArrowIcon /></a>
         </nav>
       </header>
 
@@ -62,7 +62,7 @@ export default function Home() {
             <Link className="button-link" href="/o-mne">Více o mně <ArrowIcon /></Link>
           </div>
         </div>
-        <div className="hero-art"><div className="art-outline" aria-hidden="true" /><Portrait /><div className="art-index" aria-hidden="true">PORTFOLIO — 2026</div></div>
+        <div className="hero-art"><div className="art-outline" aria-hidden="true" /><Portrait /></div>
       </section>
 
       <section className="explore" aria-labelledby="explore-title">
