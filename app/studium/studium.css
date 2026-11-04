@@ -1,0 +1,99 @@
+.study-page {
+  --study-blue: var(--blue, #3269e8);
+  --study-blue-dark: var(--navy, #142d52);
+  --study-orange: var(--orange, #f29b53);
+  --study-ink: var(--ink, #172e4b);
+  --study-muted: var(--muted, #67788b);
+  --study-border: #e4eaf4;
+  color: var(--study-ink);
+  padding: 65px 24px 110px;
+  background: transparent;
+}
+.study-container { width: min(1120px, 100%); margin: 0 auto; }
+.study-hero { max-width: 730px; margin-bottom: 75px; }
+.study-eyebrow, .study-sectionEyebrow { font-size: 12px; font-weight: 800; letter-spacing: .14em; color: var(--study-blue); }
+.study-eyebrow { display: flex; align-items: center; gap: 10px; }
+.study-orangeDot { width: 9px; height: 9px; border-radius: 50%; background: var(--study-orange); display: inline-block; }
+.study-hero h1, .study-courseHero h1 { font-size: clamp(54px, 8vw, 106px); letter-spacing: -.065em; line-height: 1.02; margin: 18px 0 22px; font-weight: 750; }
+.study-accent { color: var(--study-orange); }
+.study-hero p { font-size: clamp(17px, 2vw, 20px); line-height: 1.7; color: var(--study-muted); margin: 0; }
+.study-studySection { margin-bottom: 85px; }
+.study-sectionHeading { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: end; margin-bottom: 26px; }
+.study-sectionHeading h2 { margin: 10px 0 8px; font-size: clamp(27px, 3.5vw, 38px); letter-spacing: -.04em; line-height: 1.1; }
+.study-sectionHeading p { margin: 0; font-size: 15px; color: var(--study-muted); }
+.study-sectionChip { border: 1px solid var(--study-border); border-radius: 99px; padding: 10px 15px; font-size: 12px; font-weight: 700; color: var(--study-blue-dark); background: #fff; }
+.study-semesterGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
+.study-semesterCard { border: 1px solid #d6e0fa; border-radius: 24px; padding: 28px; background: #fff; box-shadow: 0 15px 40px rgba(35, 64, 134, .07); min-height: 236px; transition: transform .2s ease, box-shadow .2s ease; }
+.study-semesterCard:not(.study-semesterMuted):hover { transform: translateY(-3px); box-shadow: 0 20px 45px rgba(35, 64, 134, .12); }
+.study-semesterCard:first-child { border-color: #9bb6ff; box-shadow: 0 17px 43px rgba(36, 74, 203, .12); }
+.study-semesterMuted { background: #f6f7fa; border-color: #e9ecf2; box-shadow: none; color: #9098a7; }
+.study-semesterHeading { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.study-semesterNumber { font-size: 15px; color: var(--study-blue); font-weight: 800; }
+.study-semesterMuted .study-semesterNumber { color: #a3aab6; }
+.study-status { display: inline-block; font-size: 11px; font-weight: 750; border-radius: 99px; background: #e8eaf0; padding: 7px 11px; color: #87909f; }
+.study-statusActive { background: #e8efff; color: var(--study-blue); }
+.study-semesterCard h3 { font-size: 25px; letter-spacing: -.035em; margin: 18px 0 4px; }
+.study-semesterPeriod { margin: 0 0 20px; font-size: 14px; color: var(--study-muted); }
+.study-semesterMuted .study-semesterPeriod { color: #a3aab6; }
+.study-courseList { list-style: none; padding: 0; margin: 18px 0 0; }
+.study-courseList li + li { border-top: 1px solid var(--study-border); }
+.study-courseLink { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 9px 0; color: var(--study-ink); text-decoration: none; font-size: 14px; }
+.study-courseLink:hover .study-courseName { color: var(--study-blue); text-decoration: underline; text-underline-offset: 3px; }
+.study-courseCode { color: var(--study-blue); font-weight: 800; white-space: nowrap; }
+.study-courseName { flex: 1; }
+.study-linkArrow { color: var(--study-blue); font-weight: 800; }
+.study-futureText, .study-emptyText { margin: 27px 0 0; font-size: 14px; line-height: 1.5; color: #9299a8; }
+.study-secondaryCard { display: flex; gap: 24px; align-items: start; padding: 29px; border: 1px solid var(--study-border); border-radius: 24px; background: #fff; box-shadow: 0 12px 35px rgba(35, 64, 134, .04); }
+.study-secondaryCard h3 { margin: 1px 0 6px; font-size: 21px; }
+.study-secondaryCard p { margin: 0; font-size: 14px; line-height: 1.65; color: var(--study-muted); }
+.study-secondaryIcon { display: grid; place-items: center; border-radius: 15px; width: 46px; min-width: 46px; height: 46px; background: #eaf0ff; color: var(--study-blue); font-size: 24px; }
+.study-detailContainer { max-width: 1040px; }
+.study-backLink { color: var(--study-blue); text-decoration: none; font-size: 14px; font-weight: 700; }
+.study-backLink:hover { text-decoration: underline; }
+.study-courseHero { margin: 48px 0 44px; }
+.study-courseHeroCode { color: var(--study-blue); font-size: 14px; font-weight: 800; letter-spacing: .12em; }
+.study-courseHero h1 { font-size: clamp(42px, 6.4vw, 80px); max-width: 950px; margin: 15px 0 22px; overflow-wrap: anywhere; }
+.study-tagRow { display: flex; flex-wrap: wrap; gap: 10px; }
+.study-tag { border: 1px solid #e0e8fb; background: #f1f5ff; color: var(--study-blue-dark); padding: 8px 13px; border-radius: 99px; font-size: 12px; font-weight: 700; }
+.study-competenciesPanel { background: #eaf0ff; border: 1px solid #c9d8ff; border-radius: 28px; padding: 34px; margin-bottom: 23px; }
+.study-panelIntro h2 { font-size: clamp(25px, 3vw, 33px); letter-spacing: -.035em; margin: 9px 0 24px; }
+.study-competencyGrid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.study-competencyGrid li { display: flex; align-items: start; gap: 12px; background: #fff; border: 1px solid #dee7fc; border-radius: 15px; padding: 16px; line-height: 1.5; font-weight: 650; font-size: 14px; }
+.study-checkIcon { flex: none; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; color: #fff; background: var(--study-blue); font-size: 14px; }
+.study-detailGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 23px; }
+.study-infoPanel { padding: 33px; border: 1px solid var(--study-border); border-radius: 24px; background: #fff; box-shadow: 0 12px 35px rgba(35, 64, 134, .045); }
+.study-infoPanel h2 { margin: 9px 0 20px; font-size: 28px; letter-spacing: -.03em; }
+.study-infoPanel p { margin: 0 0 15px; color: #59657d; line-height: 1.8; font-size: 15px; }
+.study-infoPanel p:last-child { margin-bottom: 0; }
+@media (max-width: 760px) {
+  .study-page { padding: 45px 18px 80px; }
+  .study-hero { margin-bottom: 55px; }
+  .study-semesterGrid, .study-detailGrid, .study-competencyGrid { grid-template-columns: 1fr; }
+  .study-semesterCard { min-height: 190px; padding: 23px; }
+  .study-studySection { margin-bottom: 65px; }
+  .study-competenciesPanel, .study-infoPanel { padding: 24px; }
+  .study-sectionChip { display: none; }
+  .study-courseHero { margin-top: 34px; }
+}
+
+/* Širší úvodní text */
+.study-hero {
+  max-width: 100%;
+}
+
+.study-hero p {
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+/* Na menších obrazovkách povolit zalamování */
+@media (max-width: 900px) {
+  .study-hero p {
+    white-space: normal;
+  }
+}
+
+/* Zarovnání štítků semestrů doprava */
+.study-semesterHeading {
+  justify-content: flex-end;
+}

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// jde to moc zmenšit, podivné podbarvení při výběru myší
+
 // Po pořízení fotografie ji vlož do public/portrait.jpg a změň na true.
 const hasPortrait = true;
 
@@ -51,7 +53,6 @@ export default function Home() {
 
       <section className="hero wrap" aria-labelledby="main-heading">
         <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-line" /> STUDIJNÍ & PROFESNÍ PORTFOLIO</p>
           <h1 id="main-heading">Jakub<br /><span>Vávra</span><span className="period">.</span></h1>
           <div className="hero-description">
             <p>Studuji <strong>Podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data a&nbsp;ekonomie.</p>
@@ -67,7 +68,7 @@ export default function Home() {
 
       <section className="explore" aria-labelledby="explore-title">
         <div className="wrap">
-          <div className="section-heading"><div><p className="eyebrow">CO TU NAJDETE</p><h2 id="explore-title">Poznejte mou práci<span className="period">.</span></h2></div><p>Vyberte si oblast, která vás zajímá.</p></div>
+          <div className="section-heading"><div><p className="eyebrow"></p><h2 id="explore-title">Poznejte mou práci<span className="period">.</span></h2></div><p></p></div>
           <div className="section-list">
             {sections.map((item) => (
               <Link href={`/${item.slug}`} className="section-link" key={item.number}>

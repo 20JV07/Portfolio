@@ -1,0 +1,85 @@
+/* Detail kurzu: zcela oddělený styl bez kolize se starými panely. */
+.course-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.course-v2-card {
+  min-width: 0;
+  margin: 0;
+  padding: 26px 30px 30px;
+  background: #fff;
+  color: var(--navy, #142d52);
+  border: 1px solid #e4eaf4;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(35, 64, 134, 0.045);
+}
+
+.course-v2-card h2 {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: clamp(23px, 2.6vw, 29px);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+}
+
+.course-v2-card p {
+  margin: 0 0 15px;
+  max-width: 80ch;
+  color: #59657d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.course-v2-card p:last-child { margin-bottom: 0; }
+
+.course-v2-skills { border-color: #c9d8ff; }
+.course-v2-skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.course-v2-skillList li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  background: #f3f6ff;
+  border: 1px solid #e0e8fb;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.course-v2-check {
+  display: grid;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue, #3269e8);
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Třetí karta zabírá celou spodní řadu. */
+.course-v2-reflection {
+  grid-column: 1 / -1;
+  background: #eaf0ff;
+  border-color: #c9d8ff;
+  box-shadow: none;
+  padding-bottom: 38px;
+}
+.course-v2-reflection .course-v2-prose { max-width: 85ch; }
+
+@media (max-width: 760px) {
+  .course-v2-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .course-v2-card { padding: 23px; }
+  .course-v2-reflection { grid-column: auto; }
+}
