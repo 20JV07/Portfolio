@@ -42,15 +42,6 @@ function Portrait() {
 export default function Home() {
   return (
     <main>
-      <header className="site-header wrap">
-        <Link href="/" className="monogram" aria-label="Jakub Vávra — úvodní stránka">JV<span>.</span></Link>
-        <nav className="top-nav" aria-label="Hlavní navigace">
-          <Link href="/projekty">Projekty</Link>
-          <Link href="/o-mne">O mně</Link>
-          <a className="nav-contact" href="mailto:jakub07vavra@email.cz">Kontakt <ArrowIcon /></a>
-        </nav>
-      </header>
-
       <section className="hero wrap" aria-labelledby="main-heading">
         <div className="hero-copy">
           <h1 id="main-heading">Jakub<br /><span>Vávra</span><span className="period">.</span></h1>
@@ -81,8 +72,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="site-footer wrap"><span>© 2026 Jakub Vávra</span><span></span><a href="mailto:jakub07vavra@email.cz">Napište mi ↗</a></footer>
     </main>
   );
 }

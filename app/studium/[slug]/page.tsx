@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -12,15 +11,6 @@ export function generateStaticParams() {
   return [...bachelorSemesters, ...masterSemesters]
     .flatMap((semester) => semester.courses)
     .map((course) => ({ slug: course.slug }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const course = findCourse(slug);
-  return {
-    title: course ? `${course.name} | Studium` : "Kurz nenalezen",
-    description: course?.description,
-  };
 }
 
 async function CourseContent({ params }: Props) {

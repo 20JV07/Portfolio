@@ -1,0 +1,482 @@
+
+.about-page {
+  --about-border: #e1e8f3;
+  color: var(--ink);
+}
+
+.about-container {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.about-hero {
+  padding: 66px 0 84px;
+  max-width: 830px;
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+
+.about-eyebrow-line {
+  width: 30px;
+  height: 2px;
+  background: var(--orange);
+}
+
+.about-hero h1 {
+  color: var(--navy);
+  font-size: clamp(64px, 9vw, 116px);
+  line-height: 1.02;
+  letter-spacing: -.075em;
+  font-weight: 750;
+  margin: 24px 0 18px;
+}
+
+.about-accent {
+  color: var(--orange);
+}
+
+.about-hero > p {
+  color: var(--muted);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 720px;
+}
+
+.about-kicker {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+/* Osobní medailonek a fotografie */
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(45px, 7vw, 105px);
+  align-items: center;
+  padding: 0 0 125px;
+}
+
+.about-photo-art {
+  position: relative;
+  padding: 22px 22px 35px 0;
+}
+
+.about-photo-ring {
+  position: absolute;
+  width: 58%;
+  aspect-ratio: 1;
+  right: 0;
+  top: 0;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+
+.about-photo-frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 210px 210px 100px 100px;
+  box-shadow: 18px 22px 0 #e1eafa;
+}
+
+.about-photo-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: linear-gradient(
+    145deg,
+    #d8e6ff,
+    #a7c2f2 55%,
+    #f3c5a3
+  );
+}
+
+.about-photo-initials {
+  font-size: clamp(100px, 13vw, 170px);
+  font-weight: 800;
+  letter-spacing: -.1em;
+  color: #fff;
+  line-height: 1;
+}
+
+.about-photo-initials span {
+  color: var(--orange);
+}
+
+.about-photo-hint {
+  background: #ffffffd9;
+  color: var(--navy);
+  border-radius: 100px;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.about-photo-label {
+  position: absolute;
+  right: -8px;
+  bottom: 20px;
+  color: #8293aa;
+  font-size: 10px;
+  letter-spacing: .14em;
+  writing-mode: vertical-rl;
+}
+
+.about-intro-copy h2 {
+  font-size: clamp(35px, 4.6vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -.055em;
+  color: var(--navy);
+  margin: 20px 0 30px;
+}
+
+.about-intro-copy h2 span {
+  color: var(--blue);
+}
+
+.about-intro-copy p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #5c6d80;
+  margin: 0 0 18px;
+}
+
+.about-intro-copy strong {
+  color: var(--navy);
+}
+
+.about-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-weight: 750;
+  font-size: 13px;
+  color: var(--blue);
+  border-bottom: 1px solid #b3c5e5;
+  padding: 9px 0;
+  margin-top: 10px;
+}
+
+.about-text-link span {
+  display: inline-block;
+  transition: transform .2s;
+}
+
+.about-text-link:hover span {
+  transform: rotate(45deg);
+}
+
+/* Oblasti zájmu */
+
+.about-interests {
+  padding-bottom: 120px;
+}
+
+.about-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 22px;
+  margin-bottom: 29px;
+}
+
+.about-section-heading h2 {
+  color: var(--navy);
+  font-size: clamp(34px, 4.5vw, 53px);
+  line-height: 1.1;
+  letter-spacing: -.055em;
+  margin: 15px 0 0;
+}
+
+.about-section-heading > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 265px;
+  margin: 0 0 4px;
+}
+
+.about-interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.about-interest-card {
+  background: white;
+  border: 1px solid var(--about-border);
+  border-radius: 24px;
+  padding: 30px 26px;
+  box-shadow: 0 15px 40px #2340860a;
+  transition:
+    transform .2s,
+    box-shadow .2s,
+    border-color .2s;
+}
+
+.about-interest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px #23408618;
+  border-color: #bad0ff;
+}
+
+.about-interest-number {
+  color: var(--orange);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.about-interest-card h3 {
+  color: var(--navy);
+  font-size: 23px;
+  letter-spacing: -.04em;
+  margin: 31px 0 13px;
+}
+
+.about-interest-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Kontakt a sociální sítě */
+
+.about-contact {
+  background: #fff;
+  padding: 97px 0 115px;
+  scroll-margin-top: 20px;
+}
+
+.about-contact-heading {
+  margin-bottom: 38px;
+}
+
+.about-email-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 35px 82px 38px 35px;
+  background: var(--navy);
+  border-radius: 25px;
+  color: #fff;
+  transition:
+    background .2s,
+    transform .2s;
+}
+
+.about-email-card:hover {
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+
+.about-email-caption {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #bdd0f5;
+}
+
+.about-email-address {
+  font-size: clamp(20px, 4vw, 42px);
+  font-weight: 750;
+  letter-spacing: -.045em;
+  overflow-wrap: anywhere;
+}
+
+.about-email-arrow {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #ffffff66;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  height: 48px;
+  width: 48px;
+  font-size: 22px;
+  transition: transform .2s;
+}
+
+.about-email-card:hover .about-email-arrow {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.about-social-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.about-social-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 6px;
+  min-height: 106px;
+  padding: 24px;
+  border: 1px solid var(--about-border);
+  border-radius: 20px;
+  background: #fff;
+  transition:
+    background .2s,
+    border-color .2s;
+}
+
+.about-social-item[href]:hover {
+  background: #f5f8ff;
+  border-color: #b4c7fa;
+}
+
+.about-social-name {
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.about-social-detail {
+  grid-column: 1;
+  grid-row: 2;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.about-social-arrow {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  color: var(--blue);
+  font-size: 23px;
+  transition: transform .2s;
+}
+
+.about-social-item[href]:hover .about-social-arrow {
+  transform: rotate(45deg);
+  color: var(--orange);
+}
+
+.about-social-disabled {
+  background: #fafbfd;
+}
+
+.about-social-disabled .about-social-arrow {
+  color: #aab5c4;
+}
+
+/* Responzivní zobrazení */
+
+@media (max-width: 900px) {
+  .about-intro {
+    gap: 40px;
+  }
+
+  .about-intro-copy p {
+    font-size: 15px;
+  }
+
+  .about-interest-card {
+    padding: 25px 21px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-container {
+    width: calc(100% - 36px);
+  }
+
+  .about-hero {
+    padding: 48px 0 55px;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    padding-bottom: 88px;
+  }
+
+  .about-photo-art {
+    width: min(100%, 410px);
+    margin-inline: auto;
+  }
+
+  .about-intro-copy h2 {
+    margin-bottom: 20px;
+  }
+
+  .about-section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .about-section-heading > p {
+    max-width: none;
+  }
+
+  .about-interest-grid,
+  .about-social-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-interests {
+    padding-bottom: 82px;
+  }
+
+  .about-interest-card h3 {
+    margin-top: 20px;
+  }
+
+  .about-contact {
+    padding: 74px 0 85px;
+  }
+
+  .about-email-card {
+    padding: 27px 70px 30px 25px;
+  }
+
+  .about-email-arrow {
+    right: 19px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .about-social-list {
+    gap: 12px;
+  }
+}
+
+/* Přístupnost – omezení animací */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    transition: none !important;
+  }
+}

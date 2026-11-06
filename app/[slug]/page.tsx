@@ -25,7 +25,6 @@ export default async function Subpage({ params }: { params: Promise<{ slug: stri
   if (!page) notFound();
   return (
     <main className="subpage">
-      <header className="site-header wrap"><Link href="/" className="monogram" aria-label="Zpět na úvod">JV<span>.</span></Link><Link className="back-link" href="/">← Zpět na úvod</Link></header>
       <section className="subpage-main wrap"><p className="eyebrow"><span className="eyebrow-line" /> SOUČÁST PORTFOLIA</p><h1>{page.title}<span className="period">.</span></h1><p>{page.description}</p><div className="coming-soon">Tuto stránku právě připravuji. Brzy zde najdete více.</div><Link className="button-primary" href="/">Zpět na hlavní stránku <span aria-hidden="true">↗</span></Link></section>
     </main>
   );

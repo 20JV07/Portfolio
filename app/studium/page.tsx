@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import {
   bachelorSemesters,
@@ -7,11 +6,6 @@ import {
   type Semester,
 } from "../../lib/studium";
 import StudyShell from "./StudyShell";
-
-export const metadata: Metadata = {
-  title: "Studium",
-  description: "Přehled studia, absolvovaných kurzů a získaných kompetencí.",
-};
 
 function SemesterCard({ semester }: { semester: Semester }) {
   return (
@@ -98,7 +92,7 @@ export default function StudiumPage() {
             <div className="study-sectionHeading">
               <div>
                 <h2 id="secondary-title">Středoškolské studium</h2>
-                <p>Podrobnosti o škole a studiu doplním později.</p>
+                <p>Gymnázium Brno, Vídeňská · Programování 6l</p>
               </div>
             </div>
             <div className="study-secondaryCard">

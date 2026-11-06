@@ -97,3 +97,25 @@
 .study-semesterHeading {
   justify-content: flex-end;
 }
+
+/* Oranžový detail u nadpisů stupňů studia */
+.study-sectionHeading h2::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Animace a barevná změna šipek */
+.study-linkArrow {
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.study-courseLink:hover .study-linkArrow {
+  transform: rotate(45deg);
+  color: var(--orange);
+}

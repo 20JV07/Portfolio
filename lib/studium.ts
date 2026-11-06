@@ -16,11 +16,11 @@ export type Semester = {
   courses: Course[];
 };
 
-// Tuto hodnotu změň na true, až budeš chtít zobrazit navazující studium.
+// Pokud chceš zobrazovat připravené magisterské studium, změň na true.
 export const SHOW_MASTERS = false;
 
-// DEMONSTRAČNÍ DATA – nahraď je skutečnými kurzy z IS MU.
-// slug musí být pro každý kurz unikátní, bez mezer a diakritiky.
+// Předměty prvního semestru; anotace, kompetence a reflexe zatím zůstávají ukázkové.
+// Slug je shodný s přesným kódem předmětu (včetně velikosti písmen).
 export const bachelorSemesters: Semester[] = [
   {
     number: 1,
@@ -29,9 +29,9 @@ export const bachelorSemesters: Semester[] = [
     completed: true, // znamená „aktuální/otevřený“; po absolvování můžeš zachovat true
     courses: [
       {
-        slug: "ukazkovy-kurz",
-        code: "KOD101",
-        name: "Ukázkový kurz",
+        slug: "IB000ext",
+        code: "IB000ext",
+        name: "Matematické základy informatiky",
         description:
           "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
         competencies: [
@@ -43,7 +43,126 @@ export const bachelorSemesters: Semester[] = [
           "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
           "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
         ],
-        tags: ["Ukázka", "1. semestr"],
+        tags: ["1. semestr", "MUNI FI"],
+      },
+      {
+        slug: "IB113",
+        code: "IB113",
+        name: "Úvod do programování a algoritmizace",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI FI"],
+      },
+      {
+        slug: "PB001",
+        code: "PB001",
+        name: "Úvod do informačních technologií",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI FI"],
+      },
+      {
+        slug: "BDX_AKAP",
+        code: "BDX_AKAP",
+        name: "Akademické psaní",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI ECON"],
+      },
+      {
+        slug: "BPE_MIE1",
+        code: "BPE_MIE1",
+        name: "Mikroekonomie 1",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI ECON"],
+      },
+      {
+        slug: "BPH_USPI",
+        code: "BPH_USPI",
+        name: "Úvod do studia podnikové informatiky",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI ECON"],
+      },
+      {
+        slug: "BPJ_JI1A",
+        code: "BPJ_JI1A",
+        name: "Jazyk I/1 - Angličtina",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI ECON"],
+      },
+      {
+        slug: "BPM_MAEK",
+        code: "BPM_MAEK",
+        name: "Matematika pro ekonomy",
+        description:
+          "Sem vlož stručný abstrakt: čím se předmět zabývá, jaká témata pokrývá a jaké jsou jeho cíle.",
+        competencies: [
+          "Kompetence, kterou sis během kurzu osvojil",
+          "Další konkrétní znalost nebo praktická dovednost",
+          "Schopnost použít poznatky na reálném problému",
+        ],
+        reflection: [
+          "Sem patří tvoje osobní reflexe. Co pro tebe bylo nejpřínosnější? Co tě překvapilo?",
+          "Můžeš také vysvětlit, jak jsi poznatky využil v projektu nebo jak je plánuješ využít dál.",
+        ],
+        tags: ["1. semestr", "MUNI ECON"],
       },
     ],
   },
