@@ -166,11 +166,11 @@ export const bachelorSemesters: Semester[] = [
       },
     ],
   },
-  { number: 2, label: "2. semestr", period: "Jaro 2027", completed: false, courses: [] },
+ /* { number: 2, label: "2. semestr", period: "Jaro 2027", completed: false, courses: [] },
   { number: 3, label: "3. semestr", period: "Podzim 2027", completed: false, courses: [] },
   { number: 4, label: "4. semestr", period: "Jaro 2028", completed: false, courses: [] },
   { number: 5, label: "5. semestr", period: "Podzim 2028", completed: false, courses: [] },
-  { number: 6, label: "6. semestr", period: "Jaro 2029", completed: false, courses: [] },
+  { number: 6, label: "6. semestr", period: "Jaro 2029", completed: false, courses: [] },*/
 ];
 
 // Připravené, ale skryté magisterské studium.

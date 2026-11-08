@@ -88,6 +88,7 @@ export default function StudiumPage() {
             </section>
           )}
 
+          
           <section className="study-studySection" aria-labelledby="secondary-title">
             <div className="study-sectionHeading">
               <div>
@@ -95,14 +96,41 @@ export default function StudiumPage() {
                 <p>Gymnázium Brno, Vídeňská · Programování 6l</p>
               </div>
             </div>
+
             <div className="study-secondaryCard">
-              <div className="study-secondaryIcon" aria-hidden="true">↗</div>
-              <div>
-                <h3>Střední škola</h3>
-                <p>Zde bude název školy, studijní obor, období studia a případně maturitní zaměření.</p>
+              
+
+              <div className="study-secondaryContent">
+                <h3>Od programování k Podnikové informatice</h3>
+
+                <div className="study-secondaryText">
+                  <p>
+                    Zde doplním základní informace o svém středoškolském
+                    vzdělání, studijním zaměření a znalostech, které jsem
+                    během studia získal.
+                  </p>
+
+                  <p>
+                    V tomto odstavci představím zajímavé zkušenosti,
+                    školní aktivity a oblasti, kterým jsem se během
+                    studia věnoval nad rámec běžné výuky.
+                  </p>
+
+                  <p>
+                    Na závěr stručně popíšu, jak středoškolské studium
+                    ovlivnilo moje další směřování a zájem o propojení
+                    technologií, ekonomie a informatiky.
+                  </p>
+                </div>
+
+                <Link href="/projekty#projects-secondary" className="study-secondaryLink">
+                  Prohlédnout projekty
+                  <span aria-hidden="true">↗</span>
+                </Link>
               </div>
             </div>
           </section>
+
         </div>
       </main>
     </StudyShell>

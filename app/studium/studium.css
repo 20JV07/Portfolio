@@ -46,7 +46,16 @@
 .study-secondaryCard { display: flex; gap: 24px; align-items: start; padding: 29px; border: 1px solid var(--study-border); border-radius: 24px; background: #fff; box-shadow: 0 12px 35px rgba(35, 64, 134, .04); }
 .study-secondaryCard h3 { margin: 1px 0 6px; font-size: 21px; }
 .study-secondaryCard p { margin: 0; font-size: 14px; line-height: 1.65; color: var(--study-muted); }
-.study-secondaryIcon { display: grid; place-items: center; border-radius: 15px; width: 46px; min-width: 46px; height: 46px; background: #eaf0ff; color: var(--study-blue); font-size: 24px; }
+.study-secondaryIcon {
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  width: 46px;
+  min-width: 46px;
+  height: 46px;
+  background: #fff0e5;
+  color: #dc762d;
+}
 .study-detailContainer { max-width: 1040px; }
 .study-backLink { color: var(--study-blue); text-decoration: none; font-size: 14px; font-weight: 700; }
 .study-backLink:hover { text-decoration: underline; }
@@ -118,4 +127,65 @@
 .study-courseLink:hover .study-linkArrow {
   transform: rotate(45deg);
   color: var(--orange);
+}
+
+
+/* Obsah středoškolské karty */
+
+.study-secondaryContent {
+  min-width: 0;
+}
+
+.study-secondaryText {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.study-secondaryText p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+/* Odkaz na projekty */
+
+.study-secondaryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--study-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.study-secondaryLink span {
+  display: inline-block;
+  font-size: 19px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.study-secondaryLink:hover {
+  color: #d97732;
+}
+
+.study-secondaryLink:hover span {
+  transform: rotate(45deg);
+}
+
+.study-secondaryLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .study-secondaryLink,
+  .study-secondaryLink span {
+    transition: none;
+  }
 }

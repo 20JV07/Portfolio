@@ -6,8 +6,8 @@ const pages: Record<string, { title: string; description: string }> = {
   "o-mne": { title: "O mně", description: "Více o mém zaměření, zájmech a motivaci." },
   studium: { title: "Studium", description: "Přehled studia, předmětů a vybraných výstupů." },
   projekty: { title: "Projekty", description: "Prostor pro případové studie a dokončené projekty." },
-  dovednosti: { title: "Dovednosti", description: "Technologie, analytické nástroje a další dovednosti." },
-  zkusenosti: { title: "Pracovní zkušenosti", description: "Přehled zkušeností a profesního rozvoje." },
+  /*dovednosti: { title: "Dovednosti", description: "Technologie, analytické nástroje a další dovednosti." },
+  zkusenosti: { title: "Pracovní zkušenosti", description: "Přehled zkušeností a profesního rozvoje." },*/
 };
 
 export function generateStaticParams() {

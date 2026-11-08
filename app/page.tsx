@@ -10,8 +10,8 @@ const sections = [
   { number: "01", title: "O mně", slug: "o-mne", description: "Kdo jsem a co mě zajímá", arrow: "↗" },
   { number: "02", title: "Studium", slug: "studium", description: "Moje vzdělání a studijní výstupy", arrow: "↗" },
   { number: "03", title: "Projekty", slug: "projekty", description: "Nápady, analýzy a realizace", arrow: "↗" },
-  { number: "04", title: "Dovednosti", slug: "dovednosti", description: "Nástroje a oblasti, ve kterých se rozvíjím", arrow: "↗" },
-  { number: "05", title: "Pracovní zkušenosti", slug: "zkusenosti", description: "Moje dosavadní praxe", arrow: "↗" },
+ /* { number: "04", title: "Dovednosti", slug: "dovednosti", description: "Nástroje a oblasti, ve kterých se rozvíjím", arrow: "↗" },
+  { number: "05", title: "Pracovní zkušenosti", slug: "zkusenosti", description: "Moje dosavadní praxe", arrow: "↗" },*/
 ];
 
 function ArrowIcon() {
@@ -46,8 +46,8 @@ export default function Home() {
         <div className="hero-copy">
           <h1 id="main-heading">Jakub<br /><span>Vávra</span><span className="period">.</span></h1>
           <div className="hero-description">
-            <p>Studuji <strong>Podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data a&nbsp;ekonomie.</p>
-            <p>Na tomto webu sdílím své projekty, studijní výstupy a&nbsp;zkušenosti.</p>
+            <p>Studuji <strong>Podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data&nbsp;a&nbsp;podniková ekonomika.</p>
+            <p>Tato stránka slouží jako mé studijní portfolio a místo pro&nbsp;sdílení projektů a zkušeností.</p>
           </div>
           <div className="hero-actions">
             <Link className="button-primary" href="/projekty">Prohlédnout projekty <ArrowIcon /></Link>
