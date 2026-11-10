@@ -44,7 +44,7 @@ export const studyLevels: {
 
 // UKÁZKOVÝ OBSAH – nahraď vlastními projekty nebo položky smaž.
 export const projects: PortfolioProject[] = [
-  {
+  /*{
     id: "ukazka-vs-2026",
     title: "Ukázkový vysokoškolský projekt",
     description:
@@ -54,21 +54,80 @@ export const projects: PortfolioProject[] = [
     context: "Název předmětu · ukázka",
     tags: ["Analýza", "Python", "Studijní projekt"],
     attachments: [],
-  },
+  },*/
   {
-    id: "ukazka-ss-2025",
+    id: "soc-2025",
     title: "Výukový chatbot pro Programování",
-    description:
-      "Zde doplň popis práce, použitých technologií nebo metod a hlavní výstupy. Ke kartě lze připojit PDF, ZIP nebo oba typy souborů.",
+    description: "Popis",
     studyLevel: "secondary",
     year: 2025,
     context: "Středoškolská odborná činnost",
     tags: ["Programování", "AI", "SOČ"],
-    attachments: [{
-      label: "Plný text práce",
-      href: "/projects/SOČ - Jakub Vávra - Výukový chatbot pro programování.pdf",
-      type: "pdf",
-    }],
+    attachments: [
+      {
+        label: "Plný text odborné práce",
+        href: "/projects/SOČ - Jakub Vávra - Výukový chatbot pro programování.pdf",
+        type: "pdf",
+      },
+    ],
+  },
+  {
+    id: "gvidlearn-2025",
+    title: "Kvízová aplikace s editorem",
+    description: "Popis",
+    studyLevel: "secondary",
+    year: 2025,
+    context: "Programování",
+    tags: ["Programování", "Ročníkový projekt"],
+    attachments: [
+      {
+        label: "Dokumentace k projektu",
+        href: "/projects/Gvidlearn_dokumentace.pdf",
+        type: "pdf",
+      },
+      {
+        label: "Zazipovaný projekt",
+        href: "/projects/Projekt Gvidlearn.zip",
+        type: "zip",
+      },
+    ],
+  },
+  {
+    id: "hejtman-2026",
+    title: "Volební aplikace pro soutěž Den hejtmanem",
+    description: "Popis",
+    studyLevel: "secondary",
+    year: 2026,
+    context: "Seminář z programování",
+    tags: ["Programování", "Den hejtmanem", "Ročníkový projekt"],
+    attachments: [
+      {
+        label: "Dokumentace k projektu",
+        href: "/projects/Volební_aplikace_Den_hejtmanem.pdf",
+        type: "pdf",
+      },
+      {
+        label: "Zazipovaný projekt",
+        href: "/projects/VolebniKalkukacka.zip",
+        type: "zip",
+      },
+    ],
+  },
+  {
+    id: "pp-2026",
+    title: "Popis podnikatelského záměru",
+    description: "Popis",
+    studyLevel: "secondary",
+    year: 2026,
+    context: "Podnikatelský plán",
+    tags: ["Seminární práce", "Podnikání"],
+    attachments: [
+      {
+        label: "Text seminární práce",
+        href: "/projects/Podnikatelský_záměr.pdf",
+        type: "pdf",
+      },
+    ],
   },
 ];
 

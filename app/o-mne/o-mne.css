@@ -480,3 +480,8 @@
     transition: none !important;
   }
 }
+
+.portrait-image {
+  object-fit: cover;
+  object-position: center;
+}

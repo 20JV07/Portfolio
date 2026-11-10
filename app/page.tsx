@@ -7,9 +7,10 @@ import Image from "next/image";
 const hasPortrait = true;
 
 const sections = [
-  { number: "01", title: "O mně", slug: "o-mne", description: "Kdo jsem a co mě zajímá", arrow: "↗" },
-  { number: "02", title: "Studium", slug: "studium", description: "Moje vzdělání a studijní výstupy", arrow: "↗" },
-  { number: "03", title: "Projekty", slug: "projekty", description: "Nápady, analýzy a realizace", arrow: "↗" },
+  
+  { number: "01", title: "Studium", slug: "studium", description: "Moje vzdělání a studijní výstupy", arrow: "↗" },
+  { number: "02", title: "Projekty", slug: "projekty", description: "Nápady, analýzy a realizace", arrow: "↗" },
+  { number: "03", title: "O mně", slug: "o-mne", description: "Kdo jsem a co mě zajímá", arrow: "↗" },
  /* { number: "04", title: "Dovednosti", slug: "dovednosti", description: "Nástroje a oblasti, ve kterých se rozvíjím", arrow: "↗" },
   { number: "05", title: "Pracovní zkušenosti", slug: "zkusenosti", description: "Moje dosavadní praxe", arrow: "↗" },*/
 ];
@@ -46,8 +47,8 @@ export default function Home() {
         <div className="hero-copy">
           <h1 id="main-heading">Jakub<br /><span>Vávra</span><span className="period">.</span></h1>
           <div className="hero-description">
-            <p>Studuji <strong>Podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data&nbsp;a&nbsp;podniková ekonomika.</p>
-            <p>Tato stránka slouží jako mé studijní portfolio a místo pro&nbsp;sdílení projektů a zkušeností.</p>
+            <p>Studuji <strong>Podnikovou informatiku</strong> na Masarykově univerzitě. Zajímá mě, jak se propojují technologie, data a&nbsp;podniková ekonomika.</p>
+            <p>Tato stránka slouží jako mé studijní portfolio a&nbsp;místo pro sdílení projektů a zkušeností.</p>
           </div>
           <div className="hero-actions">
             <Link className="button-primary" href="/projekty">Prohlédnout projekty <ArrowIcon /></Link>
@@ -59,7 +60,7 @@ export default function Home() {
 
       <section className="explore" aria-labelledby="explore-title">
         <div className="wrap">
-          <div className="section-heading"><div><p className="eyebrow"></p><h2 id="explore-title">Poznejte mou práci<span className="period">.</span></h2></div><p></p></div>
+          <div className="section-heading"><div><p className="eyebrow"></p><h2 id="explore-title">Prohlédněte si mou práci<span className="period">.</span></h2></div><p></p></div>
           <div className="section-list">
             {sections.map((item) => (
               <Link href={`/${item.slug}`} className="section-link" key={item.number}>

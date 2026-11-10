@@ -60,8 +60,7 @@ export default function ProjektyPage() {
         <header className="projects-hero">
           <h1>Projekty<span>.</span></h1>
           <p>
-            Výběr mých studijních prací a projektů – od prvních programátorských
-            zkušeností po propojení technologií, dat a ekonomie.
+            Výběr mých studijních prací a projektů – od gymnázia až po vysokou školu.
           </p>
         </header>
 

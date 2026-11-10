@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./o-mne.css";
 
 // Po vložení fotografie do public/about-portrait.jpg změň na true.
-const hasAboutPortrait = false;
+const hasAboutPortrait = true;
 
 // Doplň své profily. Prázdné adresy se zobrazí jako „Brzy doplním“.
 const socialLinks = [
@@ -27,11 +27,13 @@ export default function AboutPage() {
             <div className="about-photo-frame">
               {hasAboutPortrait ? (
                 <Image
-                  src="/about-portrait.jpg"
+                  src="/about-portrait.png"
                   alt="Portrét Jakuba Vávry"
                   fill
-                  sizes="(max-width: 760px) 90vw, 430px"
-                  className="about-photo-image"
+                  priority
+                  quality={95}
+                  sizes="(max-width: 1000px) 90vw, 40vw"
+                  className="portrait-image"
                 />
               ) : (
                 <div className="about-photo-placeholder">
