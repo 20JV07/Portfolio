@@ -8,8 +8,8 @@ const hasPortrait = true;
 
 const sections = [
   
-  { number: "01", title: "Studium", slug: "studium", description: "Moje vzdělání a studijní výstupy", arrow: "↗" },
   { number: "02", title: "Projekty", slug: "projekty", description: "Nápady, analýzy a realizace", arrow: "↗" },
+  { number: "01", title: "Studium", slug: "studium", description: "Moje vzdělání a studijní výstupy", arrow: "↗" },
   { number: "03", title: "O mně", slug: "o-mne", description: "Kdo jsem a co mě zajímá", arrow: "↗" },
  /* { number: "04", title: "Dovednosti", slug: "dovednosti", description: "Nástroje a oblasti, ve kterých se rozvíjím", arrow: "↗" },
   { number: "05", title: "Pracovní zkušenosti", slug: "zkusenosti", description: "Moje dosavadní praxe", arrow: "↗" },*/

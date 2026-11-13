@@ -3,6 +3,9 @@
  * Přidání projektu = nový objekt v poli projects.
  * Přílohy vkládej do public/projects/ a uveď cestu začínající /projects/.
  */
+
+import type { ReactNode } from "react";
+
 export type StudyLevel = "bachelor" | "secondary";
 
 export type ProjectAttachment = {
@@ -14,7 +17,7 @@ export type ProjectAttachment = {
 export type PortfolioProject = {
   id: string;
   title: string;
-  description: string;
+  description: ReactNode;
   studyLevel: StudyLevel;
   year: number;
   /** Nepovinné datum YYYY-MM-DD pro řazení uvnitř stejného roku. */
@@ -61,8 +64,7 @@ export const projects: PortfolioProject[] = [
     description: "Popis",
     studyLevel: "secondary",
     year: 2025,
-    context: "Středoškolská odborná činnost",
-    tags: ["Programování", "AI", "SOČ"],
+    tags: ["Programování", "AI", "Středoškolská odborná činnost"],
     attachments: [
       {
         label: "Plný text odborné práce",
@@ -77,7 +79,6 @@ export const projects: PortfolioProject[] = [
     description: "Popis",
     studyLevel: "secondary",
     year: 2025,
-    context: "Programování",
     tags: ["Programování", "Ročníkový projekt"],
     attachments: [
       {
@@ -98,7 +99,6 @@ export const projects: PortfolioProject[] = [
     description: "Popis",
     studyLevel: "secondary",
     year: 2026,
-    context: "Seminář z programování",
     tags: ["Programování", "Den hejtmanem", "Ročníkový projekt"],
     attachments: [
       {
@@ -113,22 +113,57 @@ export const projects: PortfolioProject[] = [
       },
     ],
   },
-  {
-    id: "pp-2026",
-    title: "Popis podnikatelského záměru",
-    description: "Popis",
-    studyLevel: "secondary",
-    year: 2026,
-    context: "Podnikatelský plán",
-    tags: ["Seminární práce", "Podnikání"],
-    attachments: [
-      {
-        label: "Text seminární práce",
-        href: "/projects/Podnikatelský_záměr.pdf",
-        type: "pdf",
-      },
-    ],
-  },
+    
+{
+  id: "pp-2026",
+  title: "Popis podnikatelského záměru",
+  description: (
+    <>
+      <div className="project-descriptionSection">
+        <span className="project-subheading">Kontext</span>
+        <p>
+          Projekt vznikl jako seminární práce do předmětu Podnikatelský plán
+          vyučovaného na ECON MUNI. Zadáním bylo vytvořit návrh podnikatelského
+          plánu pro fiktivní firmu.
+        </p>
+      </div>
+
+      <div className="project-descriptionSection">
+        <span className="project-subheading">Co jsem se naučil</span>
+        <p>
+          Jednalo se o můj první projekt zaměřený na ekonomiku podniku.
+          Seznámil jsem se s využitím různých analytických metod, jako jsou
+          Porterova analýza pěti sil, PESTLE analýza nebo SWOT analýza.
+          Součástí práce byla také tvorba zjednodušené rozvahy a výkazu zisku
+          a ztráty. Získané znalosti využiji v dalších předmětech zaměřených
+          na účetnictví a podnikovou ekonomiku.
+        </p>
+      </div>
+
+      <div className="project-descriptionSection">
+        <span className="project-subheading">Co bych příště změnil</span>
+        <p>
+          Největší výzvou pro mě bylo vymyslet samotnou podnikatelskou
+          myšlenku. Nakonec jsem zvolil oblast, která je mi blízká, ale
+          zároveň poměrně ambiciózní. Při dalším zpracování bych proto
+          upřednostnil jednodušší obchodní model, který by bylo možné
+          v rámci práce tohoto rozsahu podrobněji rozpracovat.
+        </p>
+      </div>
+    </>
+  ),
+  studyLevel: "secondary",
+  year: 2026,
+  tags: ["Seminární práce", "Podnikatelský plán"],
+  attachments: [
+    {
+      label: "Text seminární práce",
+      href: "/projects/Podnikatelský_záměr.pdf",
+      type: "pdf",
+    },
+  ],
+},
+
 ];
 
 /*

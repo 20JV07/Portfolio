@@ -1,17 +1,21 @@
 import { projects, studyLevels, type PortfolioProject } from "../../lib/projects";
 import "./projekty.css";
 
-function ProjectCard({ project, number }: { project: PortfolioProject; number: number }) {
+
+function ProjectCard({ project }: { project: PortfolioProject }) {
   return (
     <article className="projects-card">
-      <div className="projects-cardIndex" aria-hidden="true">
-        {String(number).padStart(2, "0")}
-      </div>
       <div className="projects-cardBody">
-        {project.context && <p className="projects-context">{project.context}</p>}
-        <h4>{project.title}</h4>
-        <p className="projects-description">{project.description}</p>
 
+        
+
+        {/* Název projektu */}
+        <div className="projects-cardHeading">
+          <span className="projects-cardAccent" aria-hidden="true" />
+          <h4>{project.title}</h4>
+        </div>
+
+        {/* Štítky projektu */}
         {project.tags.length > 0 && (
           <ul className="projects-tags" aria-label="Štítky projektu">
             {project.tags.map((tag) => (
@@ -20,8 +24,16 @@ function ProjectCard({ project, number }: { project: PortfolioProject; number: n
           </ul>
         )}
 
+
+        {/* Popis projektu */}
+        <div className="projects-description">
+          {project.description}
+        </div>
+
+        {/* Přílohy */}
         <div className="projects-cardBottom">
           <span className="projects-attachmentLabel">Přílohy</span>
+
           {project.attachments.length > 0 ? (
             <div className="projects-files">
               {project.attachments.map((file) => (
@@ -34,7 +46,9 @@ function ProjectCard({ project, number }: { project: PortfolioProject; number: n
                   download={file.type === "zip" ? true : undefined}
                   aria-label={`${file.label} (${file.type.toUpperCase()})`}
                 >
-                  <span className="projects-fileType">{file.type.toUpperCase()}</span>
+                  <span className="projects-fileType">
+                    {file.type.toUpperCase()}
+                  </span>
                   <span>{file.label}</span>
                   <span className="projects-fileArrow" aria-hidden="true">
                     {file.type === "pdf" ? "↗" : "↓"}
@@ -46,14 +60,14 @@ function ProjectCard({ project, number }: { project: PortfolioProject; number: n
             <span className="projects-noFiles">Zatím bez příloh</span>
           )}
         </div>
+
       </div>
     </article>
   );
 }
 
-export default function ProjektyPage() {
-  let projectNumber = 0;
 
+export default function ProjektyPage() {
   return (
     <main className="projects-page">
       <div className="projects-container">
@@ -98,10 +112,9 @@ export default function ProjektyPage() {
                         <span className="projects-yearRule" aria-hidden="true" />
                       </div>
                       <div className="projects-cardList">
-                        {yearProjects.map((project) => {
-                          projectNumber += 1;
-                          return <ProjectCard key={project.id} project={project} number={projectNumber} />;
-                        })}
+                        {yearProjects.map((project) => (
+                          <ProjectCard key={project.id} project={project} />
+                        ))}
                       </div>
                     </section>
                   );

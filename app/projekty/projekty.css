@@ -1,3 +1,8 @@
+
+/* =========================================
+   ZÁKLAD STRÁNKY
+========================================= */
+
 .projects-page {
   --projects-border: #e1e8f3;
   color: var(--ink);
@@ -8,6 +13,11 @@
   width: min(1120px, 100%);
   margin: 0 auto;
 }
+
+
+/* =========================================
+   ÚVODNÍ ČÁST
+========================================= */
 
 .projects-hero {
   max-width: 850px;
@@ -23,7 +33,9 @@
   font-weight: 750;
 }
 
-.projects-hero h1 span { color: var(--orange); }
+.projects-hero h1 span {
+  color: var(--orange);
+}
 
 .projects-hero p {
   max-width: 780px;
@@ -33,7 +45,14 @@
   line-height: 1.7;
 }
 
-.projects-studySection + .projects-studySection { margin-top: 84px; }
+
+/* =========================================
+   STUDIJNÍ OBDOBÍ
+========================================= */
+
+.projects-studySection + .projects-studySection {
+  margin-top: 84px;
+}
 
 .projects-levelHeading {
   display: flex;
@@ -79,8 +98,18 @@
   font-weight: 700;
 }
 
-.projects-yearSection { margin-top: 31px; }
-.projects-yearSection + .projects-yearSection { margin-top: 48px; }
+
+/* =========================================
+   ČASOVÁ OSA A ROKY
+========================================= */
+
+.projects-yearSection {
+  margin-top: 31px;
+}
+
+.projects-yearSection + .projects-yearSection {
+  margin-top: 48px;
+}
 
 .projects-yearHeading {
   display: flex;
@@ -104,18 +133,49 @@
   background: #e4eaf4;
 }
 
-.projects-cardList { display: grid; gap: 18px; }
+
+/* =========================================
+   SEZNAM PROJEKTŮ
+========================================= */
+
+.projects-cardList {
+  display: grid;
+  gap: 18px;
+}
+
+
+/* =========================================
+   KARTA PROJEKTU
+========================================= */
 
 .projects-card {
-  display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
-  gap: 18px;
-  padding: 30px 33px;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 38px 34px 30px;
   border: 1px solid var(--projects-border);
   border-radius: 24px;
   background: white;
   box-shadow: 0 15px 40px rgba(35, 64, 134, .045);
-  transition: transform .22s, box-shadow .22s, border-color .22s;
+  overflow: hidden;
+  transition:
+    transform .22s,
+    box-shadow .22s,
+    border-color .22s;
+}
+
+/* Oranžový akcent v horní části karty */
+.projects-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 34px;
+  width: 46px;
+  height: 4px;
+  border-radius: 0 0 6px 6px;
+  background: var(--orange);
+  transition: width .22s;
 }
 
 .projects-card:hover {
@@ -124,40 +184,18 @@
   box-shadow: 0 21px 45px rgba(35, 64, 134, .10);
 }
 
-.projects-cardIndex {
-  padding-top: 2px;
-  color: var(--orange);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 13px;
-  font-weight: 750;
+.projects-card:hover::before {
+  width: 70px;
 }
 
-.projects-cardBody { min-width: 0; }
-
-.projects-context {
-  margin: 0 0 10px;
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 750;
-  letter-spacing: .015em;
+.projects-cardBody {
+  min-width: 0;
 }
 
-.projects-card h4 {
-  margin: 0 0 13px;
-  color: var(--navy);
-  font-size: clamp(22px, 2.7vw, 30px);
-  font-weight: 750;
-  letter-spacing: -.045em;
-  line-height: 1.22;
-}
 
-.projects-description {
-  max-width: 760px;
-  margin: 0;
-  color: #5c6d80;
-  font-size: 15px;
-  line-height: 1.8;
-}
+/* =========================================
+   ŠTÍTKY PROJEKTU
+========================================= */
 
 .projects-tags {
   display: flex;
@@ -165,24 +203,112 @@
   gap: 8px;
   list-style: none;
   padding: 0;
-  margin: 21px 0 26px;
+  margin: 0 0 20px;
 }
 
 .projects-tags li {
-  padding: 7px 12px;
+  padding: 6px 11px;
   border: 1px solid #e1e9fa;
   border-radius: 100px;
   background: #f1f5ff;
   color: var(--navy);
   font-size: 11px;
   font-weight: 700;
+  letter-spacing: .015em;
 }
+
+
+/* =========================================
+   NADPIS PROJEKTU
+========================================= */
+
+.projects-cardHeading {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.projects-card h4 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(22px, 2.7vw, 30px);
+  font-weight: 750;
+  letter-spacing: -.045em;
+  line-height: 1.22;
+}
+
+
+/* =========================================
+   POPIS PROJEKTU
+========================================= */
+
+.projects-description {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: #5c6d80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Jednotlivé obsahové části */
+.project-descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Podnadpis na samostatném řádku */
+.project-subheading {
+  display: block;
+  width: fit-content;
+  margin: 0;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .055em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Text podnadpisu */
+.project-descriptionSection p {
+  margin: 0;
+  color: #5c6d80;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Podpora běžných odstavců */
+.projects-description > p {
+  margin: 0;
+}
+
+/* Zpětná kompatibilita se staršími popisy */
+.project-orange {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.project-blue {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+
+/* =========================================
+   PŘÍLOHY
+========================================= */
 
 .projects-cardBottom {
   display: flex;
   align-items: center;
   gap: 12px 18px;
   flex-wrap: wrap;
+  margin-top: 27px;
   padding-top: 19px;
   border-top: 1px solid #e8edf5;
 }
@@ -193,7 +319,11 @@
   font-weight: 750;
 }
 
-.projects-files { display: flex; flex-wrap: wrap; gap: 9px; }
+.projects-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
 
 .projects-fileLink {
   display: inline-flex;
@@ -207,6 +337,7 @@
   color: var(--navy);
   font-size: 12px;
   font-weight: 700;
+  text-decoration: none;
   transition: border-color .2s, background .2s;
 }
 
@@ -234,25 +365,104 @@
   transition: transform .2s, color .2s;
 }
 
-.projects-fileLink:hover .projects-fileArrow { color: #d97732; }
-.projects-fileLink:hover .projects-fileArrow:not(:last-child) { transform: none; }
-.projects-noFiles { color: #9aa5b6; font-size: 12px; }
-.projects-empty { color: var(--muted); font-size: 16px; }
-
-@media (max-width: 760px) {
-  .projects-page { padding: 45px 18px 85px; }
-  .projects-hero { margin-bottom: 55px; }
-  .projects-levelHeading { align-items: start; }
-  .projects-levelCount { display: none; }
-  .projects-studySection + .projects-studySection { margin-top: 63px; }
-  .projects-card { grid-template-columns: 1fr; gap: 11px; padding: 24px 22px; }
-  .projects-cardIndex { font-size: 11px; }
-  .projects-description { font-size: 14px; }
-  .projects-tags { margin-bottom: 21px; }
+.projects-fileLink:hover .projects-fileArrow {
+  color: #d97732;
 }
 
+.projects-noFiles {
+  color: #9aa5b6;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PRÁZDNÝ STAV
+========================================= */
+
+.projects-empty {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+
+/* =========================================
+   ODKAZ NA STŘEDOŠKOLSKÉ PROJEKTY
+========================================= */
+
+#projects-secondary {
+  scroll-margin-top: 40px;
+}
+
+
+/* =========================================
+   RESPONZIVNÍ ZOBRAZENÍ
+========================================= */
+
+@media (max-width: 760px) {
+  .projects-page {
+    padding: 45px 18px 85px;
+  }
+
+  .projects-hero {
+    margin-bottom: 55px;
+  }
+
+  .projects-levelHeading {
+    align-items: start;
+  }
+
+  .projects-levelCount {
+    display: none;
+  }
+
+  .projects-studySection + .projects-studySection {
+    margin-top: 63px;
+  }
+
+  .projects-card {
+    padding: 33px 22px 24px;
+  }
+
+  .projects-card::before {
+    left: 22px;
+  }
+
+  .projects-cardHeading {
+    margin-bottom: 17px;
+  }
+
+  .projects-card h4 {
+    font-size: clamp(21px, 5vw, 27px);
+  }
+
+  .projects-description {
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .project-descriptionSection p {
+    font-size: 14px;
+  }
+
+  .projects-tags {
+    margin-bottom: 18px;
+  }
+
+  .projects-cardBottom {
+    margin-top: 22px;
+  }
+}
+
+
+/* =========================================
+   OMEZENÍ ANIMACÍ
+========================================= */
+
 @media (prefers-reduced-motion: reduce) {
-  .projects-page *, .projects-page *::before, .projects-page *::after {
+  .projects-page *,
+  .projects-page *::before,
+  .projects-page *::after {
     transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

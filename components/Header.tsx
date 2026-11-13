@@ -8,8 +8,8 @@ export default function Header() {
         JV<span>.</span>
       </Link>
       <nav className="top-nav" aria-label="Hlavní navigace">
-        <Link href="/studium">Studium</Link>
         <Link href="/projekty">Projekty</Link>
+        <Link href="/studium">Studium</Link>
         <Link href="/o-mne">O mně</Link>
         <Link className="nav-contact" href="/o-mne#kontakt">
           Kontakt <span aria-hidden="true">↗</span>
