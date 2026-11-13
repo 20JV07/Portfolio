@@ -122,39 +122,41 @@ export const projects: PortfolioProject[] = [
       <div className="project-descriptionSection">
         <span className="project-subheading">Kontext</span>
         <p>
-          Projekt vznikl jako seminární práce do předmětu Podnikatelský plán
-          vyučovaného na ECON MUNI. Zadáním bylo vytvořit návrh podnikatelského
-          plánu pro fiktivní firmu.
+          Projekt vznikl jako seminární práce do předmětu Podnikatelský plán 
+          vyučovaného na&nbsp;ECON MUNI, jejímž cílem bylo vytvořit návrh podnikatelského 
+          záměru pro fiktivní firmu.
         </p>
       </div>
 
       <div className="project-descriptionSection">
         <span className="project-subheading">Co jsem se naučil</span>
         <p>
-          Jednalo se o můj první projekt zaměřený na ekonomiku podniku.
-          Seznámil jsem se s využitím různých analytických metod, jako jsou
-          Porterova analýza pěti sil, PESTLE analýza nebo SWOT analýza.
-          Součástí práce byla také tvorba zjednodušené rozvahy a výkazu zisku
-          a ztráty. Získané znalosti využiji v dalších předmětech zaměřených
-          na účetnictví a podnikovou ekonomiku.
+          Jednalo se o&nbsp;můj první ekonomicky zaměřený projekt, který mi umožnil
+          se na&nbsp;konkrétním příkladu seznámit s&nbsp;využitím analytických metod, jako jsou
+          Porterova analýza pěti sil, PESTLE nebo SWOT analýza. 
+          Součástí práce byla také tvorba finančního plánu a&nbsp;zjednodušených finančních výkazů, 
+          což jsou znalosti, které se mi budou hodit v&nbsp;předmětech zaměřených na&nbsp;účetnictví a&nbsp;podnikovou 
+          ekonomiku.
         </p>
       </div>
 
       <div className="project-descriptionSection">
         <span className="project-subheading">Co bych příště změnil</span>
         <p>
-          Největší výzvou pro mě bylo vymyslet samotnou podnikatelskou
-          myšlenku. Nakonec jsem zvolil oblast, která je mi blízká, ale
-          zároveň poměrně ambiciózní. Při dalším zpracování bych proto
-          upřednostnil jednodušší obchodní model, který by bylo možné
-          v rámci práce tohoto rozsahu podrobněji rozpracovat.
+          Největší výzvou pro mě bylo vymyslet samotnou podnikatelskou myšlenku, 
+          přičemž jsem nakonec zvolil oblast, která je mi sice tematicky blízká, ale z&nbsp;hlediska případné 
+          proveditelnosti poměrně ambiciózní. Pokud budu v&nbsp;budoucnu 
+          zpracovávat podobnou případovou studii, zamyslel bych se více nad tím, jestli nezvolit 
+          jednodušší příklad, který by mi třeba nebyl tak blízky, ale pomohl by mi metody snáze 
+          aplikovat.
         </p>
       </div>
+
     </>
   ),
   studyLevel: "secondary",
   year: 2026,
-  tags: ["Seminární práce", "Podnikatelský plán"],
+  tags: ["Podnikatelský plán", "Seminární práce", "Případová studie"],
   attachments: [
     {
       label: "Text seminární práce",
